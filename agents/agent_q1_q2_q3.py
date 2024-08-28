@@ -91,6 +91,7 @@ def agent_q3(obs, config):
     int
         Column selected by the agent
     """
+
     valid_moves = [col for col in range(config.columns) if obs.board[col] == 0]
     
     winning_moves = [col for col in valid_moves if check_winning_move(obs, config, col, piece=obs.mark)]
